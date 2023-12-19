@@ -39,26 +39,8 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 
-	public static void clickOnTopBarMenuInAdminPageOrangeHRM(List<WebElement> topMenu, String topMenuOption,
-			List<WebElement> subMenu, String subMenuOption) {
-		clickOnAdvancedMenuBar(topMenu, topMenuOption);
-		if (subMenu != null) {
-			clickOnAdvancedMenuBar(subMenu, subMenuOption);
-		}
-	}
-
-	public static void clickOnMenuBar(List<WebElement> leftMenuOptions, String menuItem) {
-		List<WebElement> leftMainMenu = leftMenuOptions;
-		for (WebElement MainMenu : leftMainMenu) {
-			if (MainMenu.getText().contains(menuItem)) {
-				MainMenu.click();
-				break;
-			}
-		}
-	}
-
-	public static void clickOnTopBarMenuInAdminPageOrangeHRM2(List<WebElement> topMenu, String topMenuOption,
-			List<WebElement> subMenu, String subMenuOption) {
+	public static void clickOnTopBarMenu(List<WebElement> topMenu, String topMenuOption, List<WebElement> subMenu,
+			String subMenuOption) {
 		clickOnAdvancedMenuBar(topMenu, topMenuOption);
 		if (subMenu != null) {
 			clickOnAdvancedMenuBar(subMenu, subMenuOption);

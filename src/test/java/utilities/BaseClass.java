@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.DashboardPage;
 import pages.LoginPage;
+import pages.RegisterPage;
 
 
 
@@ -63,7 +64,7 @@ public class BaseClass {
 		}
 		return driver;
 	}
-
+	RegisterPage rp = new RegisterPage();
 	LoginPage lp = new LoginPage();
 	DashboardPage dp = new DashboardPage();
 

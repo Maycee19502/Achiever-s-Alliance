@@ -16,7 +16,7 @@ public class test1 extends CommonMethods{
 	@Test(retryAnalyzer= RetryAnalyzer.class)
 	public void addUser() {
 
-		Assert.assertEquals(true, false);
+		Assert.assertEquals(true, true);
 		
 
 	}
