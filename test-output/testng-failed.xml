@@ -8,7 +8,7 @@
           <include name="logOut"/>
           <include name="getDriver"/>
           <include name="login"/>
-          <include name="addUser"/>
+          <include name="test2"/>
         </methods>
       </class> <!-- testCases.test1 -->
     </classes>
