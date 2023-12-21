@@ -5,7 +5,6 @@
     <classes>
       <class name="testCases.test1">
         <methods>
-          <include name="logOut"/>
           <include name="getDriver"/>
           <include name="login"/>
           <include name="test2"/>

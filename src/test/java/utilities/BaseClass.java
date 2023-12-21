@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -74,10 +75,32 @@ public class BaseClass {
 		lp.email.sendKeys(BaseClass.getProperty("email"));
 		lp.password.sendKeys(BaseClass.getProperty("password"));
 		lp.signInButton.click();
+		
+		try {
+		if (lp.errorMessage.getText().contains("unsuccessful")) {
+		lp.registerButton.click();	
+		rp.firstName.sendKeys(BaseClass.getProperty("firstName"));
+		rp.lastName.sendKeys(BaseClass.getProperty("lastName"));
+		rp.email.sendKeys(BaseClass.getProperty("email"));
+		rp.password.sendKeys(BaseClass.getProperty("password"));
+		rp.confirmPassword.sendKeys(BaseClass.getProperty("password"));
+		rp.register.click();
+		rp.continueButton.click();
+		lp.loginButton.click();
+		lp.email.sendKeys(BaseClass.getProperty("email"));
+		lp.password.sendKeys(BaseClass.getProperty("password"));
+		lp.signInButton.click();
+		
+		}
+		} catch(NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		
+		//"div[@class='message-error validation-summary-errors']'' error message xpath
 		//Assert.assertEquals(dp.dashboardPageText.getText(), "Dashboard");
 	}
 
-	 @AfterMethod(alwaysRun=true)
+//	 @AfterMethod(alwaysRun=true)
 	
 		 public void logOut() {
 		       
