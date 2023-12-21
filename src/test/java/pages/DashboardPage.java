@@ -8,45 +8,46 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.BaseClass;
 
-
-
 public class DashboardPage {
-	
+
 	public DashboardPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
+
 	}
+
+	@FindBy(xpath = "//[@id='topcartlink' ]//[contains(text(),'Shopping cart')]")
+	public WebElement ShoppingCart;
+
 	@FindBy(xpath = "//div[@class='header-links']/ul/li[2]")
 	public WebElement logoutButton;
-	
-	@FindBy(xpath="//[@class='top-menu notmobile'] /li[1]/a") 
-    public WebElement Computers;
 
-    @FindBy(xpath="//[@class='top-menu notmobile'] /li[2]/a") 
-    public WebElement Electronics;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Computers ')]")
+	public WebElement Computers;
 
-    @FindBy(xpath="//[//[@class='top-menu notmobile'] /li[3]/a") 
-    public WebElement Apparel;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Electronics ')]")
+	public WebElement Electronics;
 
-    @FindBy(xpath="//[@class='top-menu notmobile'] /li[4]/a") 
-    public WebElement DigitalDownloads;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Apparel ')]")
+	public WebElement Apparel;
 
-    @FindBy(xpath="//[@class='top-menu notmobile'] /li[5]/a") 
-    public WebElement Books;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
+	public WebElement DigitalDownloads;
 
-    @FindBy(xpath="//[@class='top-menu notmobile'] /li[6]/a") 
-    public WebElement Jewelry;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Books ')]")
+	public WebElement Books;
 
-    @FindBy(xpath="//[@class='top-menu notmobile'] /li[7]/a") 
-    public WebElement GiftCards;
+	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Jewelry ')]")
+	public WebElement Jewelry;
 
-    @FindBy(id="small-searchterm")
-    public WebElement SearchBar;
+	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Gift Cards ')]")
+	public WebElement GiftCards;
 
-    @FindBy(xpath="//[@type='submit']")
-    public WebElement SearchButton;
+	@FindBy(id = "small-searchterm")
+	public WebElement SearchBar;
 
-    @FindBy(xpath="//[@class='header-logo']")
-    public WebElement Logo;
-	
+	@FindBy(xpath = "//[@type='submit']")
+	public WebElement SearchButton;
 
+	@FindBy(xpath = "//[@class='header-logo']")
+	public WebElement Logo;
 }
