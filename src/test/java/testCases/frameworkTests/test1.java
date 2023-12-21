@@ -1,4 +1,4 @@
-package testCases;
+package testCases.frameworkTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -13,7 +13,7 @@ import utilities.RetryAnalyzer;
 
 public class test1 extends CommonMethods{
 
-	@Test(retryAnalyzer= RetryAnalyzer.class)
+	//@Test(retryAnalyzer= RetryAnalyzer.class)
 	public void addUser() {
 
 		Assert.assertEquals(true, true);
