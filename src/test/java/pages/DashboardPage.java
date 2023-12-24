@@ -15,7 +15,7 @@ public class DashboardPage {
 
 	}
 
-	@FindBy(xpath = "//[@id='topcartlink' ]//[contains(text(),'Shopping cart')]")
+	@FindBy(xpath = "//*[@id='topcartlink' ]//[contains(text(),'Shopping cart')]")
 	public WebElement ShoppingCart;
 
 	@FindBy(xpath = "//div[@class='header-links']/ul/li[2]")
@@ -36,16 +36,16 @@ public class DashboardPage {
 	@FindBy(xpath = "//*[@class='sublist first-level']//a[contains(text(),'Cell phones')]")
 	public WebElement electronicsDropDownCellPhones;
 
-	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Apparel ')]")
+	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Apparel ')]")
 	public WebElement Apparel;
 
-	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
+	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
 	public WebElement DigitalDownloads;
 
-	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Books ')]")
+	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Books ')]")
 	public WebElement Books;
 
-	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Jewelry ')]")
+	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Jewelry ')]")
 	public WebElement Jewelry;
 
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Gift Cards ')]")
@@ -54,9 +54,9 @@ public class DashboardPage {
 	@FindBy(id = "small-searchterm")
 	public WebElement SearchBar;
 
-	@FindBy(xpath = "//[@type='submit']")
+	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement SearchButton;
 
-	@FindBy(xpath = "//[@class='header-logo']")
+	@FindBy(xpath = "//div[@class='header-logo']")
 	public WebElement Logo;
 }
