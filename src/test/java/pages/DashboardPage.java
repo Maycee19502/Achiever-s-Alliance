@@ -21,8 +21,14 @@ public class DashboardPage {
 	@FindBy(xpath = "//div[@class='header-links']/ul/li[2]")
 	public WebElement logoutButton;
 
+	@FindBy(xpath = "//ul[@class='top-menu notmobile']")
+	public WebElement topMenuBar;
+
 	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Computers ')]")
 	public WebElement Computers;
+
+	@FindBy(xpath = "//*[@class='sublist first-level']//a[contains(text(),'Notebooks')]")
+	public WebElement computerDropDownNotebook;
 
 	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Electronics ')]")
 	public WebElement Electronics;
