@@ -15,4 +15,7 @@ public class NotebookPage {
 
 	@FindBy(xpath = "//*[@class='details']/h2//a[contains(text(), 'Apple MacBook Pro 13-inch')]")
 	public WebElement appleNotebookPro;
+
+	@FindBy(xpath = "//div[@class='compare-products']")
+	public WebElement AddToCompareProductPage;
 }

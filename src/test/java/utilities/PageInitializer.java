@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.CellPhonePage;
 import pages.DashboardPage;
 import pages.LoginPage;
 import pages.NotebookPage;
@@ -13,7 +14,8 @@ public class PageInitializer extends BaseClass {
 	public static DashboardPage dp;
 	public static ReviewPage review;
 	public static NotebookPage notebook;
-
+	public static CellPhonePage cell;
+	
 	public static void initialize() {
 
 		rp = new RegisterPage();
@@ -21,6 +23,7 @@ public class PageInitializer extends BaseClass {
 		dp = new DashboardPage();
 		review = new ReviewPage();
 		notebook = new NotebookPage();
+		cell = new CellPhonePage();
 	}
 
 }
