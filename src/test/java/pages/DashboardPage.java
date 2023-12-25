@@ -39,6 +39,9 @@ public class DashboardPage {
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Apparel ')]")
 	public WebElement Apparel;
 
+	@FindBy(xpath = "//ul[@class='sublist first-level']//a[contains(text(), 'Shoes')]")
+	public WebElement ApparelDropDownShoes;
+
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
 	public WebElement DigitalDownloads;
 
@@ -51,7 +54,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Gift Cards ')]")
 	public WebElement GiftCards;
 
-	@FindBy(id = "small-searchterm")
+	@FindBy(xpath = "//input[@id='small-searchterms']")
 	public WebElement SearchBar;
 
 	@FindBy(xpath = "//button[@type='submit']")
