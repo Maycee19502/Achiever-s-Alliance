@@ -14,6 +14,7 @@ public class TC2_verifyProductComparisonFunctionality extends CommonMethods {
 	public void verifyProductComparisonFunctionality() {
 
 		Actions actions = new Actions(BaseClass.getDriver());
+		super.verifyURL();
 		actions.moveToElement(dp.Electronics).build().perform();
 		super.hardWait(3);
 		dp.electronicsDropDownCellPhones.click();

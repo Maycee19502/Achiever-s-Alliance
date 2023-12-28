@@ -17,6 +17,7 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 	public void verifyReviewFunc() {
 
 		Actions actions = new Actions(BaseClass.getDriver());
+		super.verifyURL();
 		actions.moveToElement(dp.Computers).build().perform();
 		super.hardWait(3);
 		dp.computerDropDownNotebook.click();
