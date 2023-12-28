@@ -15,7 +15,7 @@ public class DashboardPage {
 
 	}
 
-	@FindBy(xpath = "//[@id='topcartlink' ]//[contains(text(),'Shopping cart')]")
+	@FindBy(id = "topcartlink")
 	public WebElement ShoppingCart;
 
 	@FindBy(xpath = "//div[@class='header-links']/ul/li[2]")
@@ -30,7 +30,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Apparel ')]")
 	public WebElement Apparel;
 
-	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
+	@FindBy(xpath = "//ul[@class='top-menu notmobile']//a[contains(text(),'Digital downloads ')]")
 	public WebElement DigitalDownloads;
 
 	@FindBy(xpath = "//[@class='top-menu notmobile']//a[contains(text(),'Books ')]")
@@ -42,7 +42,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Gift Cards ')]")
 	public WebElement GiftCards;
 
-	@FindBy(id = "small-searchterm")
+	@FindBy(id ="small-searchterms")
 	public WebElement SearchBar;
 
 	@FindBy(xpath = "//[@type='submit']")

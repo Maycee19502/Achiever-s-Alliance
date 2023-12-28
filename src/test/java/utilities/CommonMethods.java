@@ -261,5 +261,13 @@ public class CommonMethods extends PageInitializer {
 			e.printStackTrace();
 		}
 	}
+	public static Float PriceConverter(String price) {
+
+		String newPrice = price.substring(1);
+		Float PriceInFloat = Float.parseFloat(newPrice);
+
+		return PriceInFloat;
+
+	}
 
 }

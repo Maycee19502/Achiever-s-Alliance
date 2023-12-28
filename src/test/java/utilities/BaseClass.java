@@ -122,8 +122,6 @@ public class BaseClass {
 //
 //	}
 
-	
-
 	// PropertiesReader
 
 	private static Properties properties;

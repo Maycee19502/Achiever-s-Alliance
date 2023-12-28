@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-21T10:22:14 EST" name="Default suite" finished-at="2023-12-21T10:22:29 EST" duration-ms="14383">
+  <suite started-at="2023-12-26T18:27:25 EST" name="Default suite" finished-at="2023-12-26T18:27:38 EST" duration-ms="12577">
     <groups>
     </groups>
-    <test started-at="2023-12-21T10:22:14 EST" name="Default test" finished-at="2023-12-21T10:22:29 EST" duration-ms="14383">
-      <class name="testCases.frameworkTests.test1">
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testCases.frameworkTests.test1@1706a5c9]" started-at="2023-12-21T10:22:14 EST" name="getDriver" finished-at="2023-12-21T10:22:14 EST" duration-ms="16" status="PASS">
+    <test started-at="2023-12-26T18:27:25 EST" name="Default test" finished-at="2023-12-26T18:27:38 EST" duration-ms="12577">
+      <class name="testCases.frameworkTests.Merfu_TestCases">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testCases.frameworkTests.Merfu_TestCases@5d235104]" started-at="2023-12-26T18:27:25 EST" name="getDriver" finished-at="2023-12-26T18:27:25 EST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testCases.frameworkTests.test1@1706a5c9]" started-at="2023-12-21T10:22:14 EST" name="login" finished-at="2023-12-21T10:22:29 EST" duration-ms="14325" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testCases.frameworkTests.Merfu_TestCases@5d235104]" started-at="2023-12-26T18:27:26 EST" name="login" finished-at="2023-12-26T18:27:36 EST" duration-ms="10911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="test2()[pri:0, instance:testCases.frameworkTests.test1@1706a5c9]" started-at="2023-12-21T10:22:29 EST" name="test2" finished-at="2023-12-21T10:22:29 EST" duration-ms="6" status="PASS">
+        <test-method signature="TC02_ValidateAddToCartFunctionality()[pri:0, instance:testCases.frameworkTests.Merfu_TestCases@5d235104]" started-at="2023-12-26T18:27:36 EST" name="TC02_ValidateAddToCartFunctionality" finished-at="2023-12-26T18:27:38 EST" duration-ms="1626" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- testCases.frameworkTests.test1 -->
+        </test-method> <!-- TC02_ValidateAddToCartFunctionality -->
+      </class> <!-- testCases.frameworkTests.Merfu_TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

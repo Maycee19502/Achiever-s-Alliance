@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.test1">
+      <class name="testCases.frameworkTests.Merfu_TestCases">
         <methods>
+          <include name="TC02_ValidateAddToCartFunctionality"/>
           <include name="getDriver"/>
           <include name="login"/>
-          <include name="test2"/>
         </methods>
-      </class> <!-- testCases.test1 -->
+      </class> <!-- testCases.frameworkTests.Merfu_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
