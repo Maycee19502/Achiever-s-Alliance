@@ -20,8 +20,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class CommonMethods extends PageInitializer {
+	
+	
+	public static void verifyURL() {
+		String expectedUrl = BaseClass.getProperty("url");
+		String ActualUrl = BaseClass.getDriver().getCurrentUrl();
+		Assert.assertEquals(expectedUrl, ActualUrl);
+	}
 
 	// this method is used for sending String(text) to the element we have given
 	public static void sendText(WebElement element, String text) {
