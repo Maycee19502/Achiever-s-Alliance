@@ -24,11 +24,15 @@ import org.testng.Assert;
 
 public class CommonMethods extends PageInitializer {
 	
+	public static void verifyAnyUrl(String expectedUrl) {
+		String actualUrl = BaseClass.getDriver().getCurrentUrl();
+		Assert.assertEquals(actualUrl, expectedUrl);
+	}
 	
 	public static void verifyURL() {
 		String expectedUrl = BaseClass.getProperty("url");
-		String ActualUrl = BaseClass.getDriver().getCurrentUrl();
-		Assert.assertEquals(expectedUrl, ActualUrl);
+		String actualUrl = BaseClass.getDriver().getCurrentUrl();
+		Assert.assertEquals(actualUrl, expectedUrl);
 	}
 
 	// this method is used for sending String(text) to the element we have given

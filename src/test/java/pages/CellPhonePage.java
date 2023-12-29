@@ -22,4 +22,7 @@ public class CellPhonePage {
 
 	@FindBy(xpath = "//div[@class='bar-notification success']//a[contains(text(), 'product comparison')]")
 	public WebElement ProductComparisonPopupLink;
+	
+	@FindBy(xpath = "//img[@alt='Picture of HTC One M8 Android L 5.0 Lollipop']")
+	public WebElement HtcOneM8ImageLink;
 }
