@@ -27,5 +27,8 @@ public class ShoesPage {
 
 	@FindBy(xpath = "//span[@id='price-value-25']")
 	public WebElement priceBlock;
+	
+	@FindBy(xpath = "//span[contains(text(), '$27.56')]")
+	public WebElement adidasConsortPrice;
 
 }

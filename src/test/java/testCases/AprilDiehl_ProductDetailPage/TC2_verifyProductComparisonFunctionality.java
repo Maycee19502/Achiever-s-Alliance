@@ -12,15 +12,17 @@ public class TC2_verifyProductComparisonFunctionality extends CommonMethods {
 
 	@Test
 	public void verifyProductComparisonFunctionality() {
-
-		Actions actions = new Actions(BaseClass.getDriver());
+		
 		super.verifyURL();
+		Actions actions = new Actions(BaseClass.getDriver());
 		actions.moveToElement(dp.Electronics).build().perform();
 		super.hardWait(3);
 		dp.electronicsDropDownCellPhones.click();
 		cell.HtcOneM8TextLink.click();
 		cell.AddToCompareProductPage.click();
 		cell.ProductComparisonPopupLink.click();
+		super.verifyAnyUrl("https://demo.nopcommerce.com/compareproducts");
+		cell.HtcOneM8ImageLink.isDisplayed();
 
 	}
 }

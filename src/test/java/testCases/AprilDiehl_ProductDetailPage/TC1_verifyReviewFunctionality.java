@@ -15,9 +15,9 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 
 	@Test
 	public void verifyReviewFunc() {
-
-		Actions actions = new Actions(BaseClass.getDriver());
+		
 		super.verifyURL();
+		Actions actions = new Actions(BaseClass.getDriver());
 		actions.moveToElement(dp.Computers).build().perform();
 		super.hardWait(3);
 		dp.computerDropDownNotebook.click();
@@ -27,6 +27,10 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 		review.reviewTextArea.sendKeys(BaseClass.getProperty("reviewTextArea"));
 		review.reviewRadioButton1.click();
 		review.reviewSubmitButton.click();
+		review.reviewSuccessfullyAdded.isDisplayed();
+		review.verifyReviewSubmission.isDisplayed();
+
+//		System.out.println("on review submission page" + review.verifyReviewSubmission.toString());
 
 //		WebElement computers = BaseClass.getDriver()
 //				.findElement(By.xpath("//*[@class='top-menu notmobile']//a[contains(text(),'Computers ')]"));

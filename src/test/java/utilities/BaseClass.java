@@ -99,7 +99,7 @@ public class BaseClass {
 		// Assert.assertEquals(dp.dashboardPageText.getText(), "Dashboard");
 	}
 
-	@AfterMethod(alwaysRun = true)
+	// @AfterMethod(alwaysRun = true)
 
 	public void logOut() {
 
@@ -107,8 +107,8 @@ public class BaseClass {
 
 	}
 
-//	// driver tear down method
-	@AfterClass(alwaysRun = true)
+// driver tear down method
+//	@AfterClass(alwaysRun = true)
 	public static void tearDown() {
 		if (BaseClass.getDriver() != null) {
 			BaseClass.getDriver().close();

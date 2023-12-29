@@ -28,12 +28,12 @@ public class ReviewPage {
 	@FindBy(xpath = "//button[@name='add-review']")
 	public WebElement reviewSubmitButton;
 
-//	@FindBy(xpath = "")
-//	public  WebElement ;
-//	
-//	@FindBy(xpath = "")
-//	public  WebElement ;
-//	
+	@FindBy(xpath = "//div[contains (text(), 'review text area test')]")
+	public WebElement verifyReviewSubmission;
+
+	@FindBy(xpath = "//div[@class='result']")
+	public WebElement reviewSuccessfullyAdded;
+
 //	@FindBy(xpath = "")
 //	public  WebElement ;
 }

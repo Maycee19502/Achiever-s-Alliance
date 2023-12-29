@@ -11,9 +11,9 @@ public class TC3_verifyDetailsOfProductOnProductPage extends CommonMethods {
 	@Test
 
 	public void verifyDetailsOfProductsPage() {
-
-		Actions action = new Actions(BaseClass.getDriver());
+		
 		super.verifyURL();
+		Actions action = new Actions(BaseClass.getDriver());
 		action.moveToElement(dp.Apparel).build().perform();
 		super.hardWait(3);
 		dp.ApparelDropDownShoes.click();
@@ -22,6 +22,7 @@ public class TC3_verifyDetailsOfProductOnProductPage extends CommonMethods {
 		shoe.size8.click();
 		shoe.colorBlock.isDisplayed();
 		shoe.priceBlock.isDisplayed();
+		shoe.adidasConsortPrice.equals(BaseClass.getProperty("adidasConsortiumCampus"));
 
 	}
 }
