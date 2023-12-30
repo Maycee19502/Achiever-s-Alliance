@@ -9,33 +9,39 @@ import org.testng.annotations.Test;
 
 import utilities.BaseClass;
 import utilities.CommonMethods;
+import utilities.Constants;
 
-@Test
 public class TC1_verifyReviewFunctionality extends CommonMethods {
 
+	@Test
 	public void verifyReviewFunc() {
-
+		
+		super.verifyURL();
 		Actions actions = new Actions(BaseClass.getDriver());
-
-		WebElement computers = BaseClass.getDriver()
-				.findElement(By.xpath("//*[@class='top-menu notmobile']//a[contains(text(),'Computers ')]"));
-		actions.moveToElement(computers).build().perform();
-
+		actions.moveToElement(dp.Computers).build().perform();
+		super.hardWait(3);
 		dp.computerDropDownNotebook.click();
-//		      WebElement notebook=BaseClass.getDriver().findElement(By.xpath("//*[@class='sublist first-level']//a[contains(text(),'Notebooks')]"));	         
-//		     notebook.click();
-
 		notebook.appleNotebookPro.click();
-		// appleNotebookPro=
-		// BaseClass.getDriver().findElement(By.xpath("//*[@class='details']/h2//a[contains(text(),
-		// 'Apple MacBook Pro 13-inch')]"));
-		// appleNotebookPro.click();
-
 		review.productReviewsLink.click();
 		review.reviewTitle.sendKeys(BaseClass.getProperty("reviewTitle"));
 		review.reviewTextArea.sendKeys(BaseClass.getProperty("reviewTextArea"));
 		review.reviewRadioButton1.click();
 		review.reviewSubmitButton.click();
+		review.reviewSuccessfullyAdded.isDisplayed();
+		review.verifyReviewSubmission.isDisplayed();
+
+//		System.out.println("on review submission page" + review.verifyReviewSubmission.toString());
+
+//		WebElement computers = BaseClass.getDriver()
+//				.findElement(By.xpath("//*[@class='top-menu notmobile']//a[contains(text(),'Computers ')]"));
+
+//		      WebElement notebook=BaseClass.getDriver().findElement(By.xpath("//*[@class='sublist first-level']//a[contains(text(),'Notebooks')]"));	         
+//		     notebook.click();
+
+		// appleNotebookPro=
+		// BaseClass.getDriver().findElement(By.xpath("//*[@class='details']/h2//a[contains(text(),
+		// 'Apple MacBook Pro 13-inch')]"));
+		// appleNotebookPro.click();
 
 //		     WebElement productReviewsLink = BaseClass.getDriver().findElement(By.xpath("//div[@class='product-review-links']//a[contains(text(), 'review(s)')]"));
 //		     productReviewsLink.click();

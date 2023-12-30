@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -98,7 +99,7 @@ public class BaseClass {
 		// Assert.assertEquals(dp.dashboardPageText.getText(), "Dashboard");
 	}
 
-//	 @AfterMethod(alwaysRun=true)
+	// @AfterMethod(alwaysRun = true)
 
 	public void logOut() {
 
@@ -106,16 +107,16 @@ public class BaseClass {
 
 	}
 
-//	// driver tear down method
-//	 @AfterClass(alwaysRun = true)
-//	public static void tearDown() {
-//		if (baseClass.getDriver() != null) {
-//			baseClass.getDriver().close();
-//			baseClass.getDriver().quit();
-//
-//		}
-//
-//	}
+// driver tear down method
+//	@AfterClass(alwaysRun = true)
+	public static void tearDown() {
+		if (BaseClass.getDriver() != null) {
+			BaseClass.getDriver().close();
+			BaseClass.getDriver().quit();
+
+		}
+
+	}
 
 	// PropertiesReader
 
