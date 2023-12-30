@@ -42,10 +42,10 @@ public class DashboardPage {
 	@FindBy(xpath = "//*[@class='top-menu notmobile']//a[contains(text(),'Gift Cards ')]")
 	public WebElement GiftCards;
 
-	@FindBy(id = "small-searchterm")
+	@FindBy(id = "small-searchterms")
 	public WebElement SearchBar;
 
-	@FindBy(xpath = "//[@type='submit']")
+	@FindBy(xpath = "//*[@type='submit']")
 	public WebElement SearchButton;
 
 	@FindBy(xpath = "//[@class='header-logo']")

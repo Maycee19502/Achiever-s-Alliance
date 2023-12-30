@@ -17,8 +17,10 @@ public class LoginPage {
     
     @FindBy(xpath = "//div[@class='message-error validation-summary-errors']")
     public WebElement errorMessage;
+    
    @FindBy(xpath = "//div[@class='header-links']/ul/li[2]")
 	public WebElement loginButton;
+   
     @FindBy(xpath= "//input[@class='email']")
     public WebElement email;
     
