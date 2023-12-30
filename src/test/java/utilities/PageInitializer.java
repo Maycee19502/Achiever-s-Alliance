@@ -1,6 +1,7 @@
 package utilities;
 
 import pages.DashboardPage;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.NotebookPage;
 import pages.RegisterPage;
@@ -13,6 +14,8 @@ public class PageInitializer extends BaseClass {
 	public static DashboardPage dp;
 	public static ReviewPage review;
 	public static NotebookPage notebook;
+	public static HomePage hp;
+	
 
 	public static void initialize() {
 
@@ -21,6 +24,7 @@ public class PageInitializer extends BaseClass {
 		dp = new DashboardPage();
 		review = new ReviewPage();
 		notebook = new NotebookPage();
+		hp = new HomePage();
 	}
 
 }
