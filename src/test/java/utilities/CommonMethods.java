@@ -20,20 +20,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class CommonMethods extends PageInitializer {
-	
-	public static void verifyAnyUrl(String expectedUrl) {
-		String actualUrl = BaseClass.getDriver().getCurrentUrl();
-		Assert.assertEquals(actualUrl, expectedUrl);
-	}
-	
-	public static void verifyURL() {
-		String expectedUrl = BaseClass.getProperty("url");
-		String actualUrl = BaseClass.getDriver().getCurrentUrl();
-		Assert.assertEquals(actualUrl, expectedUrl);
-	}
 
 	// this method is used for sending String(text) to the element we have given
 	public static void sendText(WebElement element, String text) {
@@ -272,6 +260,14 @@ public class CommonMethods extends PageInitializer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public static Float PriceConverter(String price) {
+
+		String newPrice = price.substring(1);
+		Float PriceInFloat = Float.parseFloat(newPrice);
+
+		return PriceInFloat;
+
 	}
 
 }
