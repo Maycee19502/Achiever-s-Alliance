@@ -14,6 +14,5 @@ public class MyAccount_OrdersButton extends CommonMethods {
 		click(hp.OrdersButton);
 		Assert.assertTrue(BaseClass.getDriver().getCurrentUrl().contains("https://demo.nopcommerce.com/order/history"));
 	
-		
 	}
 }
