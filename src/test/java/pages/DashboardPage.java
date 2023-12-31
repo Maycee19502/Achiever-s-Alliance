@@ -57,6 +57,7 @@ public class DashboardPage {
 	@FindBy(id = "small-searchterms")
 	public WebElement SearchBar;
 
+
 	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement SearchButton;
 
