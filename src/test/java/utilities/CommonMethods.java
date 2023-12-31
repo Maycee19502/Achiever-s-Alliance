@@ -239,7 +239,7 @@ public class CommonMethods extends PageInitializer {
 
 	// action class
 
-	public static void hoverOverMouse(WebElement element) {
+	public static void mouseHoverOver(WebElement element) {
 		Actions action = new Actions(BaseClass.getDriver());
 		action.moveToElement(element).build().perform();
 	}
