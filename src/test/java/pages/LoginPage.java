@@ -6,14 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.BaseClass;
 
-
-
 public class LoginPage {
-	
+
 	public LoginPage() {
+
         PageFactory.initElements(BaseClass.getDriver(), this);
     }
-    
     
     @FindBy(xpath = "//div[@class='message-error validation-summary-errors']")
     public WebElement errorMessage;
@@ -32,4 +30,5 @@ public class LoginPage {
     
     @FindBy(xpath = "//button[@class='button-1 register-button']")
     public WebElement registerButton;
+
 }
