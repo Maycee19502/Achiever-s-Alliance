@@ -1,11 +1,15 @@
 package utilities;
 
 
+import pages.CellPhonePage;
 import pages.DashboardPage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.NightVisionsProductPage;
+import pages.NotebookPage;
 import pages.RegisterPage;
+import pages.ReviewPage;
+import pages.ShoesPage;
 import pages.shoppingCartPage;
 
 public class PageInitializer extends BaseClass{
@@ -29,8 +33,8 @@ public class PageInitializer extends BaseClass{
 		lp = new LoginPage();
 		dp = new DashboardPage();
 
-		nvp=new NightVisionsProductPage();
-		scp=new shoppingCartPage();
+		nvp = new NightVisionsProductPage();
+		scp = new shoppingCartPage();
     
 		review = new ReviewPage();
 		notebook = new NotebookPage();
