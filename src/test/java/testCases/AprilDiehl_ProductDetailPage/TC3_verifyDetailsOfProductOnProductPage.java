@@ -12,10 +12,9 @@ public class TC3_verifyDetailsOfProductOnProductPage extends CommonMethods {
 
 	public void verifyDetailsOfProductsPage() {
 		
-		super.verifyURL();
-		Actions action = new Actions(BaseClass.getDriver());
-		action.moveToElement(dp.Apparel).build().perform();
-		super.hardWait(3);
+		verifyURL();
+		mouseHoverOver(dp.Apparel);
+		hardWait(3);
 		dp.ApparelDropDownShoes.click();
 		shoe.adidasConsortiumCampus80s.click();
 		shoe.selectSizeDropDown.click();

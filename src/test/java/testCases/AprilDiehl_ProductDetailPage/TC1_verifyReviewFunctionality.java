@@ -16,20 +16,20 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 	@Test
 	public void verifyReviewFunc() {
 		
-		super.verifyURL();
-		Actions actions = new Actions(BaseClass.getDriver());
-		actions.moveToElement(dp.Computers).build().perform();
-		super.hardWait(3);
+		verifyURL();
+		mouseHoverOver(dp.Computers);
+		hardWait(2);
 		dp.computerDropDownNotebook.click();
 		notebook.appleNotebookPro.click();
 		review.productReviewsLink.click();
 		review.reviewTitle.sendKeys(BaseClass.getProperty("reviewTitle"));
 		review.reviewTextArea.sendKeys(BaseClass.getProperty("reviewTextArea"));
 		review.reviewRadioButton1.click();
+		hardWait(2);
 		review.reviewSubmitButton.click();
 		review.reviewSuccessfullyAdded.isDisplayed();
 		review.verifyReviewSubmission.isDisplayed();
-
+		
 //		System.out.println("on review submission page" + review.verifyReviewSubmission.toString());
 
 //		WebElement computers = BaseClass.getDriver()
