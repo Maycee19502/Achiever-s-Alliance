@@ -32,7 +32,6 @@ public class PageInitializer extends BaseClass{
 		rp = new RegisterPage();
 		lp = new LoginPage();
 		dp = new DashboardPage();
-
 		nvp = new NightVisionsProductPage();
 		scp = new shoppingCartPage();
     
