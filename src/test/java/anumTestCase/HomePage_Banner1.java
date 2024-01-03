@@ -1,4 +1,4 @@
-package Anumsohail;
+package anumTestCase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
