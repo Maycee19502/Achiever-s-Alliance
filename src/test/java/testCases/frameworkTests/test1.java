@@ -11,19 +11,19 @@ import utilities.RetryAnalyzer;
 
 @Listeners(ListenersTestNG.class)
 
-public class test1 extends CommonMethods{
+public class test1 extends CommonMethods {
 
-	//@Test(retryAnalyzer= RetryAnalyzer.class)
+	// @Test(retryAnalyzer= RetryAnalyzer.class)
 	public void addUser() {
 
 		Assert.assertEquals(true, true);
-		
 
 	}
-	@Test	
+
+	@Test
 	public void test2() {
 		System.out.println("hello");
-}
+	}
 }
 
 //    //"div[@class='message-error validation-summary-errors']'' error message xpath

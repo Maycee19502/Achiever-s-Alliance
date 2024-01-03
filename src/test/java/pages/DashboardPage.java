@@ -50,4 +50,11 @@ public class DashboardPage {
 
 	@FindBy(xpath = "//[@class='header-logo']")
 	public WebElement Logo;
+
+	
+	
+	
+	
+	
+
 }

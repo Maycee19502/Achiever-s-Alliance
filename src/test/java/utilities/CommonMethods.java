@@ -246,7 +246,7 @@ public class CommonMethods extends PageInitializer {
 		LocalDateTime now = LocalDateTime.now();
 		// convert the date into the string with the specified format
 		String dateString = now.format(formatter);
-		// casting webDriver to takescreenshot
+		// casting webDriver to take screenshot
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		// get the screenshot as an outputFile
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);

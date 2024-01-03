@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
 
-public class testCase2 extends CommonMethods{
+public class testCase2 extends CommonMethods {
 
 	@Test
 	public void testingFramework() {
