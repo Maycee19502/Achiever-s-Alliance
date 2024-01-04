@@ -62,4 +62,14 @@ public class DashboardPage {
 
 	@FindBy(xpath = "//div[@class='header-logo']")
 	public WebElement Logo;
+	
+	@FindBy(xpath = "//a[contains(text(),'New online store is open!')]")
+    public WebElement NewOnlineStoreIsOpen;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'nopCommerce new release!')]")
+	public WebElement nopCommerceNewRelease;
+	
+	@FindBy(xpath="//a[contains(text(),'About nopCommerce')]")
+	public WebElement AboutNopCommerce;
 }
