@@ -1,4 +1,4 @@
-package testCases.frameworkTests;
+package testCases.Merfu_ShoppingCart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
