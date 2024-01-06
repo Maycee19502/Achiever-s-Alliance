@@ -73,16 +73,4 @@ public class DashboardPage {
 	
 	@FindBy(xpath="//a[contains(text(),'About nopCommerce')]")
 	public WebElement AboutNopCommerce;
-	
-	@FindBy(xpath = "//*[@class='master-wrapper-page']/div/div/div/div/select")
-	public WebElement customerCurrency;
-	
-	@FindBy(xpath = "//*[@class='header-links']/ul/li[3]/a/span[1]")
-	public WebElement Wishlist;
-	
-	@FindBy(xpath = "//*[@id=\"bar-notification\"]/div/span")
-	public WebElement Close;
-	
-	@FindBy(xpath = "//*[@class='master-wrapper-page']/div/div/div/div/select/option[2]")
-	public WebElement Euro;
 }
