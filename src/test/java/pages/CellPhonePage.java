@@ -25,10 +25,4 @@ public class CellPhonePage {
 	
 	@FindBy(xpath = "//img[@alt='Picture of HTC One M8 Android L 5.0 Lollipop']")
 	public WebElement HtcOneM8ImageLink;
-	
-	@FindBy(xpath = "//*[@id='product-details-form']/div[2]/div/div[2]/div[8]/div/button")
-	public WebElement AddToWishlistButton ;
-
-	
-
 }
