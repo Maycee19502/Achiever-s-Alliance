@@ -85,4 +85,5 @@ public class DashboardPage {
 	
 	@FindBy(xpath = "//*[@class='master-wrapper-page']/div/div/div/div/select/option[2]")
 	public WebElement Euro;
+	
 }

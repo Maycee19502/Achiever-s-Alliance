@@ -27,7 +27,7 @@ public class CellPhonePage {
 	public WebElement HtcOneM8ImageLink;
 	
 	@FindBy(xpath = "//*[@id='product-details-form']/div[2]/div/div[2]/div[8]/div/button")
-	public WebElement AddToWishlistButton ;
+	public WebElement AddToWishlistButton ; 
 
 	
 

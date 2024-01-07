@@ -33,6 +33,7 @@ public class TC1_verificationCurrencyChangeFeature extends CommonMethods {
 
 		hardWait(2);
 
+		
 		// sel.getFirstSelectedOption();
 		// Thread.sleep(2000);
 

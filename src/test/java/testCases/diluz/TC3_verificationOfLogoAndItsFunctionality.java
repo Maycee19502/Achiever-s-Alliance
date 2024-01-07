@@ -29,3 +29,4 @@ public class TC3_verificationOfLogoAndItsFunctionality extends CommonMethods {
 	}
 }
 
+
