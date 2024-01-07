@@ -77,5 +77,16 @@ public class HomePage {
 
 	@FindBy(xpath = "//div[@class='master-wrapper-content']/div/div/div/div/div[5]/div[2]/div[3]/div[1]/a")
 	public WebElement ThirdNews;
+  
+  	@FindBy(xpath = "//ul[@class='list']//a[@href='/news']")
+	public WebElement NewsLink;
+	
+	@FindBy(xpath = "//ul[@class='list']//a[@href='/blog']")
+	public WebElement BlogLink;
+	
+	@FindBy(xpath = "//a[@href=\"/recentlyviewedproducts\"]")
+	public WebElement RecentlyViewedLink;
+	
 
 }
+
