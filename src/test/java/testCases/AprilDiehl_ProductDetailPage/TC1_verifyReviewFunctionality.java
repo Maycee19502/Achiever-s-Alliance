@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.BaseClass;
@@ -27,9 +28,10 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 		review.reviewRadioButton1.click();
 		hardWait(2);
 		review.reviewSubmitButton.click();
-		review.reviewSuccessfullyAdded.isDisplayed();
-		review.verifyReviewSubmission.isDisplayed();
-		
+		Assert.assertTrue(review.reviewSuccessfullyAdded.isDisplayed(),BaseClass.getProperty("reviewNotSuccessfullyAdded"));
+		Assert.assertTrue(review.verifyReviewSubmission.isDisplayed(), BaseClass.getProperty("reviewSubmissionError"));
+
+		//		assertElementIsDisplayed("review.verifyReviewSubmission", "reviewSubmissionError");
 //		System.out.println("on review submission page" + review.verifyReviewSubmission.toString());
 
 //		WebElement computers = BaseClass.getDriver()

@@ -1,4 +1,4 @@
-package testCases.frameworkTests;
+package testCases.Merfu_ShoppingCart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -94,14 +94,8 @@ public class Merfu_TestCases extends CommonMethods {
 		float ActualTotal = CommonMethods.PriceConverter(Total);
 		Assert.assertEquals(ExpectedTotal, ActualTotal);
 	}
-	@Test(enabled=true)
-	public void test1() {
-		String expectedUrl = BaseClass.getProperty("url");
-		String ActualUrl = BaseClass.getDriver().getCurrentUrl();
-		Assert.assertEquals(expectedUrl, ActualUrl);
-		Assert.assertTrue(dp.SearchBar.isDisplayed());
-		
-		CommonMethods.sendText(dp.SearchBar,BaseClass.getProperty("searchItem1"));
-	}
+ 
+	
+	 
 
 }
