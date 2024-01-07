@@ -34,6 +34,14 @@ public class HomePage {
 	@FindBy(xpath = "//div[@class='result']")
 	public WebElement Result;
 	
+	@FindBy(xpath = "//ul[@class='list']//a[@href='/news']")
+	public WebElement NewsLink;
+	
+	@FindBy(xpath = "//ul[@class='list']//a[@href='/blog']")
+	public WebElement BlogLink;
+	
+	@FindBy(xpath = "//a[@href=\"/recentlyviewedproducts\"]")
+	public WebElement RecentlyViewedLink;
 	
 	
 	
