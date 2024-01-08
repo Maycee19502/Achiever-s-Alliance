@@ -15,6 +15,7 @@ public class TC2_verifyProductComparisonFunctionality extends CommonMethods {
 	public void verifyProductComparisonFunctionality() {
 		
 		verifyURL();
+		deleteAllCookies();
 		mouseHoverOver(dp.Electronics);
 		hardWait(2);
 		dp.electronicsDropDownCellPhones.click();

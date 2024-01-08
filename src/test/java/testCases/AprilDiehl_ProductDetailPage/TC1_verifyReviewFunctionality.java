@@ -18,6 +18,7 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 	public void verifyReviewFunc() {
 		
 		verifyURL();
+		deleteAllCookies();
 		mouseHoverOver(dp.Computers);
 		hardWait(2);
 		dp.computerDropDownNotebook.click();
