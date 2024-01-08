@@ -12,8 +12,8 @@ public class TC3_verifyDetailsOfProductOnProductPage extends CommonMethods {
 	@Test
 
 	public void verifyDetailsOfProductsPage() {
-		
 		verifyURL();
+		deleteAllCookies();
 		mouseHoverOver(dp.Apparel);
 		hardWait(3);
 		dp.ApparelDropDownShoes.click();

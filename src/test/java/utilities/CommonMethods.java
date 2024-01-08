@@ -289,7 +289,11 @@ public class CommonMethods extends PageInitializer {
 		Float PriceInFloat = Float.parseFloat(newPrice);
 
 		return PriceInFloat;
-
 	}
+		public static void deleteAllCookies() {
+			BaseClass.getDriver().manage().deleteAllCookies();
+		}
+	}
+	
 
-}
+
