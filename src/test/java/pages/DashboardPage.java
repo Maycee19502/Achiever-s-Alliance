@@ -15,7 +15,7 @@ public class DashboardPage {
 
 	}
 
-	@FindBy(xpath = "//*[@id='topcartlink' ]//[contains(text(),'Shopping cart')]")
+	@FindBy(xpath = "//span[@class='cart-label']")
 	public WebElement ShoppingCart;
 
 	@FindBy(xpath = "//div[@class='header-links']/ul/li[2]")

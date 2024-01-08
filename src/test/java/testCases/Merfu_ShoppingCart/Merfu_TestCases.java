@@ -12,12 +12,11 @@ import utilities.BaseClass;
 import utilities.CommonMethods;
 
 public class Merfu_TestCases extends CommonMethods {
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public static void TC01_VerifyShoppingCartIcon() {
-		String expectedUrl = BaseClass.getProperty("url");
-		String ActualUrl = BaseClass.getDriver().getCurrentUrl();
-		Assert.assertEquals(expectedUrl, ActualUrl);
-
+		BaseClass.getDriver().manage().deleteAllCookies();
+		verifyURL();
+		hardWait(3);
 		Assert.assertTrue(dp.ShoppingCart.isDisplayed());
 
 		dp.ShoppingCart.click();
@@ -29,6 +28,7 @@ public class Merfu_TestCases extends CommonMethods {
 	@Test(enabled = false)
 	public static void TC02_ValidateAddToCartFunctionality() {
 		BaseClass.getDriver().manage().deleteAllCookies();
+		verifyURL();
 		dp.DigitalDownloads.click();
 		WebElement NightVisions = BaseClass.getDriver()
 				.findElement(By.xpath("//h2[@class='product-title']//a[contains(text(),'Night Visions')]"));
@@ -67,6 +67,7 @@ public class Merfu_TestCases extends CommonMethods {
 
 	@Test(enabled = false)
 	public static void TC03_ValidateUpdateQuantityFunctionality() {
+		verifyURL();
 		dp.DigitalDownloads.click();
 		WebElement NightVisions = BaseClass.getDriver()
 				.findElement(By.xpath("//h2[@class='product-title']//a[contains(text(),'Night Visions')]"));
