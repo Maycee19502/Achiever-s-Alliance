@@ -13,11 +13,10 @@ public class TC1_CustumerServiceNews extends CommonMethods {
 
 		verifyURL();
 		hp.NewsLink.click();
-		
 		verifyAnyUrl("https://demo.nopcommerce.com/news");
-//		Assert.assertTrue(np.NewOline.isDisplayed());
-//		Assert.assertTrue(np.NewRelease.isDisplayed(), "New Release is NOT Displayed");
-		//Assert.assertTrue(np.About.isDisplayed(), "News About is NOT Displayed");
+		Assert.assertTrue(np.NewOline.isDisplayed(), "New Online Store is NOT Displayed");
+		Assert.assertTrue(np.NewRelease.isDisplayed(), "New Release is NOT Displayed");
+		Assert.assertTrue(np.About.isDisplayed(), "News About is NOT Displayed");
 		
 	}
 

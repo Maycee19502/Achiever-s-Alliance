@@ -8,7 +8,7 @@ import utilities.BaseClass;
 
 public class NewsPage {
 
-	public void NewsPage() {
+	public NewsPage() {
 
 		PageFactory.initElements(BaseClass.getDriver(), this);
 
