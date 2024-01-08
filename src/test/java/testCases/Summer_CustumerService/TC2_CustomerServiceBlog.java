@@ -1,5 +1,6 @@
 package testCases.Summer_CustumerService;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
@@ -12,7 +13,8 @@ public class TC2_CustomerServiceBlog extends CommonMethods {
 		verifyURL();
 		hp.BlogLink.click();
 		verifyAnyUrl("https://demo.nopcommerce.com/blog");
-
+		Assert.assertTrue(blog.Blog1.isDisplayed(), "Needs a wishlist NOT Displayed");
+		Assert.assertTrue(blog.Blog2.isDisplayed(), "Why Blog can Help Not Displayed");
 	}
 }
 //. Verify the user is on the Homepage.

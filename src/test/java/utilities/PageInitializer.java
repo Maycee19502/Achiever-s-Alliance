@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.BlogPage;
 import pages.BooksPage;
 import pages.CellPhonePage;
 import pages.DashboardPage;
@@ -32,6 +33,7 @@ public class PageInitializer extends BaseClass {
 	public static BooksPage bp;
     public static RecentlyViewedPage rvp;
     public static NewsPage np;
+    public static BlogPage blog;
     
     
     
@@ -51,6 +53,7 @@ public class PageInitializer extends BaseClass {
 		bp = new BooksPage();
 		rvp = new RecentlyViewedPage();
 		np = new NewsPage();
+		blog = new BlogPage();
 	}
 
 }
