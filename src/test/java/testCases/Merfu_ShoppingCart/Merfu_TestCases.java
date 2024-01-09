@@ -33,9 +33,9 @@ public class Merfu_TestCases extends CommonMethods {
 		WebElement NightVisions = BaseClass.getDriver()
 				.findElement(By.xpath("//h2[@class='product-title']//a[contains(text(),'Night Visions')]"));
 		NightVisions.click();
-		String expectedPageTitle = "nopCommerce demo store. Night Visions";
+		String expectedPageTitle =BaseClass.getProperty("expectedPageTitle");
 		String actualPageTitle = BaseClass.getDriver().getTitle();
-		Assert.assertEquals(actualPageTitle,expectedPageTitle);
+		Assert.assertEquals(actualPageTitle, expectedPageTitle);
 
 		String nightVisionsUnitPrice = nvp.ItemPrice.getText();
 		String itemQuantity = nvp.ItemQuantity.getAttribute("value");
@@ -43,15 +43,15 @@ public class Merfu_TestCases extends CommonMethods {
 		nvp.ShoppingCartIcon.click();
 
 		String actualPageTitle2 = scp.pageTitle.getText();
-		String expectedPageTitle2 = "Shopping cart";
+		String expectedPageTitle2 = BaseClass.getProperty("expectedPageTitle2");
 		Assert.assertEquals(actualPageTitle2, expectedPageTitle2);
 
 		String actualShoppingCartItem = scp.shoppingCartItem.getText();
-		String expectedShoppingCartItem = "Night Visions";
-		Assert.assertEquals(actualShoppingCartItem,expectedShoppingCartItem);
+		String expectedShoppingCartItem =BaseClass.getProperty("expectedShoppingCartItem");
+		Assert.assertEquals(actualShoppingCartItem, expectedShoppingCartItem);
 
 		String actualPrice = scp.price.getText();
-		Assert.assertEquals( actualPrice,nightVisionsUnitPrice);
+		Assert.assertEquals(actualPrice, nightVisionsUnitPrice);
 
 		String shoppingCartQuantity = scp.quantityTextBox.getAttribute("value");
 		Assert.assertEquals(shoppingCartQuantity, itemQuantity);
@@ -61,7 +61,7 @@ public class Merfu_TestCases extends CommonMethods {
 		float expectedTotal = quantity * price;
 		String Total = scp.Total.getText();
 		float actualTotal = PriceConverter(Total);
-		Assert.assertEquals(actualTotal,expectedTotal);
+		Assert.assertEquals(actualTotal, expectedTotal);
 
 	}
 
@@ -75,28 +75,26 @@ public class Merfu_TestCases extends CommonMethods {
 		String nightVisionsUnitPrice = nvp.ItemPrice.getText();
 		nvp.AddToCart.click();
 		nvp.ShoppingCartIcon.click();
+		
 
-		String actualPageTitle = scp.pageTitle.getText();
-		String expectedPageTitle = "Shopping cart";
-		Assert.assertEquals(actualPageTitle, expectedPageTitle);
+		String actualPageTitle2 = scp.pageTitle.getText();
+		String expectedPageTitle2 = BaseClass.getProperty("expectedPageTitle2");
+		Assert.assertEquals(actualPageTitle2, expectedPageTitle2);
 
 		CommonMethods.sendText(scp.quantityTextBox, BaseClass.getProperty("updateQuantity"));
 		scp.updateShoppingCart.click();
 		String expectedQuanitity = BaseClass.getProperty("updateQuantity");
 		String actualQuantity = scp.quantityTextBox.getAttribute("value");
-		Assert.assertEquals(actualQuantity,expectedQuanitity);
+		Assert.assertEquals(actualQuantity, expectedQuanitity);
 
 		int quantity = Integer.parseInt(expectedQuanitity);
 		System.out.println(quantity);
-		float price =  PriceConverter(nightVisionsUnitPrice);
+		float price = PriceConverter(nightVisionsUnitPrice);
 		System.out.println(price);
 		float expectedTotal = quantity * price;
 		String Total = scp.Total.getText();
 		float actualTotal = PriceConverter(Total);
-		Assert.assertEquals(actualTotal,expectedTotal);
+		Assert.assertEquals(actualTotal, expectedTotal);
 	}
- 
-	
-	 
 
 }
