@@ -4,14 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import utilities.BaseClass;
 import utilities.CommonMethods;
+import utilities.ListenersTestNG;
+import utilities.RetryAnalyzer;
 
+@Listeners(ListenersTestNG.class)
 public class TC2_verifyProductComparisonFunctionality extends CommonMethods {
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void verifyProductComparisonFunctionality() {
 		
 		verifyURL();
