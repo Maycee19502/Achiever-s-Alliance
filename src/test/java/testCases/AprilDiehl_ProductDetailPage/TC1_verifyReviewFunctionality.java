@@ -6,19 +6,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import utilities.BaseClass;
 import utilities.CommonMethods;
 import utilities.Constants;
+import utilities.ListenersTestNG;
+import utilities.RetryAnalyzer;
 
+@Listeners(ListenersTestNG.class)
 public class TC1_verifyReviewFunctionality extends CommonMethods {
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void verifyReviewFunc() {
-		
 		verifyURL();
-		deleteAllCookies();
 		mouseHoverOver(dp.Computers);
 		hardWait(2);
 		dp.computerDropDownNotebook.click();
@@ -31,7 +33,8 @@ public class TC1_verifyReviewFunctionality extends CommonMethods {
 		review.reviewSubmitButton.click();
 		Assert.assertTrue(review.reviewSuccessfullyAdded.isDisplayed(),BaseClass.getProperty("reviewNotSuccessfullyAdded"));
 		Assert.assertTrue(review.verifyReviewSubmission.isDisplayed(), BaseClass.getProperty("reviewSubmissionError"));
-
+		
+		
 		//		assertElementIsDisplayed("review.verifyReviewSubmission", "reviewSubmissionError");
 //		System.out.println("on review submission page" + review.verifyReviewSubmission.toString());
 
