@@ -9,6 +9,7 @@ import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.NoSuchWindowException;
@@ -23,7 +24,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class CommonMethods extends PageInitializer {
+	
 
+	
+//	 public void assertElementIsDisplayed(String elementId, String message) {
+//	        WebElement element = BaseClass.getDriver().findElement(By.id(elementId));
+//	        Assert.assertTrue(element.isDisplayed(), BaseClass.getProperty(message));
+//	    }      
+//	    
 	public static void verifyURL() {
 		String expectedUrl = BaseClass.getProperty("url");
 		String actualUrl = BaseClass.getDriver().getCurrentUrl();
@@ -281,7 +289,11 @@ public class CommonMethods extends PageInitializer {
 		Float PriceInFloat = Float.parseFloat(newPrice);
 
 		return PriceInFloat;
-
 	}
+		public static void deleteAllCookies() {
+			BaseClass.getDriver().manage().deleteAllCookies();
+		}
+	}
+	
 
-}
+
